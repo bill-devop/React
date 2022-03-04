@@ -1,17 +1,12 @@
+import ExpenseDate from "./ExpenseDate";
+
 import "./ExpenseItem.css";
 
 function ExpenseItem(props) {
-  const month = props.date.toLocaleString("en-US", { month: "long" });
-  const day = props.date.toLocaleString("en-US", { day: "2-digit" });
-  const year = props.date.getFullYear();
-
+  // now we create attributes for the ExpenseDate like we did in App.js. This will pass props on to that component. This is how you pass on. You cannot skip. Forwarding.
   return (
     <div className="expense-item">
-      <div>
-        <div>{month}</div>
-        <div>{year}</div>
-        <div>{day}</div>
-      </div>
+      <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
