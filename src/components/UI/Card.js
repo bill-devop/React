@@ -1,6 +1,6 @@
 import "./Card.css";
 
-function Card(props) {
+const Card = (props) => {
   // using the props key className values inside the using component and any of its css.
   const classes = "card " + props.className;
 
