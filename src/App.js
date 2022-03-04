@@ -1,8 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
-  // passing data via 'props'
-
   const expenses = [
     { title: "Car Insurance", amount: 294.67, date: new Date(2021, 2, 28) },
     { title: "Towel", amount: 12.29, date: new Date(2021, 3, 23) },
