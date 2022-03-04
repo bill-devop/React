@@ -10,9 +10,14 @@ const App = () => {
     { title: "Wooden Table", amount: 2733.75, date: new Date(2020, 6, 26) },
   ];
 
+  const addExpenseHandler = expense => {
+    console.log('inapp.js');
+    console.log(expense);
+  }
+
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </div>
   );
